@@ -1,0 +1,8 @@
+servers:
+  default: mssql-test01
+  dataSources:
+    - name: mssql-test01
+      connectionString: DRIVER={ODBC Driver 18 for SQL Server};SERVER=mssql-test01-turin.evopricing.local;Trusted_Connection=yes;TrustServerCertificate=Yes;
+
+tools: 
+  dtexec: C:\Program Files\Microsoft SQL Server\140\DTS\Binn\dtexec.exe
