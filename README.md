@@ -1,13 +1,10 @@
-# How to install and run PTT?
-- [1. PTT: Package Testing Tool](#1.-ptt:-package-testing-tool)
-    - [1.1 How to install?](#11-how-to-install)
-    - [1.2 How to run?](#12-how-to-run)
-    - [1.3 How it works?](#13-how-it-works)
+# PTT: Package Testing Tool
+
+ - [1.1 How to install?](#11-how-to-install)
+ - [1.2 How to run?](#12-how-to-run)
+ - [1.3 How it works?](#13-how-it-works)
 
     
-## 1. PTT: Package Testing Tool
-
-
 The *ptt* command line application is part of Evo SSIS testing infrastructure.  
 The tools allow SSIS packages (but it's not limited to just SSIS packages) testing through the following simple process:  
 
@@ -71,7 +68,7 @@ These rules can be set and config as below:
 ```yaml
 variables:
   plan_name: testplan_cabinet
-  database: teddy_input
+  database: xxx_input_db
   package_file: etl-common.ispac
   package_name: "cabinet common processing.dtsx"
   currency: EUR
