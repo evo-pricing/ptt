@@ -24,7 +24,7 @@ class SQLQueryAction(SQLAction):
         with open(file_path, encoding='utf-8') as f:
             # substitute variables on SQL file using Jinja
             t = Template(f.read(), undefined=NullUndefined)
-            statements = t.render(variables).split('GO')
+            statements = t.render(variables).split('\nGO\n')
             async with aioodbc.connect(dsn=self.get_ds(), autocommit=True) as conn:
                 cur = await conn.cursor()
                 for i, statement in enumerate(statements):
