@@ -1,3 +1,4 @@
+from glob import glob
 import logging
 import os
 import shutil
@@ -19,8 +20,15 @@ class FileAction():
 
     async def delete(self):
         '''
-        Delete file from [path]
+        Delete file(s) from [path]:
+        If [path] is a file, delete the file.
+        If [path] is a directory delete all files inside the directory.
         '''
         # TODO handle exception and error
-        if os.path.exists(self.action['delete']):
-            os.remove(self.action['delete'])
+        path = self.action['delete']
+        if os.path.exists(path):                        
+            if os.path.isdir(path):
+                for file in glob(os.path.join(path, '*.*')):
+                    os.remove(file)
+            if os.path.isfile(path):
+                os.remove(path)
