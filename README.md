@@ -27,7 +27,7 @@ Prerequisites:
 ## 1.1 How to install
 
 In order to install the tool in your **local environment** please follow these steps:
-1. Clone the PTT project from [this](https://gitlab.evouser.com/etl/ssis-packages-test-tool.git) repository
+1. Clone the PTT project from [this](https://github.com/evo-pricing/ptt) repository
 2. Create your python virtual environment and then activate it (these instructions can vary based on your operating system)
 ```bash 
 python -m venv venv
